@@ -46,12 +46,12 @@ def arctan(x):
             rand = res
         return res
     
-def factorial(x):
-    fRes = x
+def factorial(x: int) -> int:
+    f_res: int = x
     while x > 1:
         x -= 1
-        fRes *= x
-    return fRes
+        f_res *= x
+    return f_res
 
 def toRadians(degrees):
     return degrees*PI/180
