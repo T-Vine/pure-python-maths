@@ -38,13 +38,13 @@ def arctan(x):
         results.append(r)
     return sum(results)
 
-def root(x):
-    rand = 50 # A random starting point.
-    res = 0
-    for i in range(10):
-        res = 0.5*(rand+(x/rand))
-        rand = res
-    return res
+    def root(x):
+        rand = 50 # A random starting point.
+        res = 0
+        for i in range(10):
+            res = 0.5*(rand+(x/rand))
+            rand = res
+        return res
     
 def factorial(x):
     fRes = x
@@ -59,9 +59,9 @@ def toRadians(degrees):
 def toDegrees(radians):
     return radians*(180/PI)
 
-x = 0.524
-#print(root(11301))
-print(sine(toRadians(17))) # Accepts radians.
-#print(cosine(toRadians(0)))
-#print(tangent(toRadians(45)))
+if __name__ == "__main__":
+    print(root(11301))
+    print(sine(toRadians(17))) # Accepts radians.
+    print(cosine(toRadians(0)))
+    print(tangent(toRadians(45)))
 
