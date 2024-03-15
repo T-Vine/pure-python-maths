@@ -1,8 +1,8 @@
 PI = 22/7
 
-def sine(theta):
-    results = []
-    r = 0.0
+def sine(theta: float) -> float:
+    results: list[float] = []
+    r: float = 0.0
     for i in range(0, 50):
         r = (-1)**i
         r /= factorial((2*i)+1)
