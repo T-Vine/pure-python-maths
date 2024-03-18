@@ -17,7 +17,7 @@ def sine(theta: float) -> float:
     return sum(results)
 
 
-def cosine(theta):
+def cosine(theta: float) -> float:
     if theta < 90:
         return sine(theta+toRadians(90)) # Graphs are the same but skewed.
     return sine(theta-toRadians(90))
