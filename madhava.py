@@ -28,8 +28,6 @@ def tangent(theta: float) -> float:
 def arcsine(x):
     if abs(x) > 1:
         return None
-    if x < 0:
-        return arctan(x/math.sqrt(1-(x**2)))
     return arctan(x/root(1-(x**2)))
 
 def arctan(x: float) -> int:
