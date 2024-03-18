@@ -44,13 +44,13 @@ def arctan(x):
         results.append(r)
     return sum(results)
 
-    def root(x):
-        rand = 50 # A random starting point.
-        res = 0
-        for i in range(10):
-            res = 0.5*(rand+(x/rand))
-            rand = res
-        return res
+def root(x):
+    rand = 50 # A random starting point.
+    res = 0
+    for i in range(10):
+        res = 0.5*(rand+(x/rand))
+        rand = res
+    return res
     
 def factorial(x: int) -> int:
     f_res: int = x
