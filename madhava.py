@@ -42,7 +42,7 @@ def arctan(x: float) -> int:
         results.append(r)
     return sum(results)
 
-def root(x: float) -> int:
+def root(x: float) -> float:
     rand = 50 # A random starting point.
     res: float = 0
     for i in range(10):
