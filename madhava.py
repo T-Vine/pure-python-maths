@@ -1,11 +1,11 @@
-def pi():
-    res = []
+def pi() -> float:
+    res: list[float] = []
     for i in range(0,10000000):
         new_res = (-1)**i
         new_res /= (2*i + 1)
         res.append(new_res)
     return sum(res)*4
-PI = pi()
+PI: float = pi()
 def sine(theta: float) -> float:
     results: list[float] = []
     r: float = 0.0
