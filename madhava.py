@@ -25,7 +25,7 @@ def cosine(theta: float) -> float:
 def tangent(theta: float) -> float:
     return sine(theta)/cosine(theta)
 
-def arcsine(x):
+def arcsine(x: float) -> float:
     if abs(x) > 1:
         return None
     return arctan(x/root(1-(x**2)))
