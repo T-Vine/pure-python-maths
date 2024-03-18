@@ -19,7 +19,7 @@ def sine(theta: float) -> float:
 
 def cosine(theta: float) -> float:
     if theta < 90:
-        return sine(theta+to_radians(90)) # Graphs are the same but skewed.
+        return sine(to_radians(90)-theta) # Graphs are the same but skewed.
     return sine(theta-to_radians(90))
 
 def tangent(theta: float) -> float:
@@ -41,6 +41,13 @@ def arctan(x: float) -> int:
         r *= x**((2*i)+1)
         results.append(r)
     return sum(results)
+    
+def arccos(x: float) -> int:
+    if abs(x) > 1:
+        return None
+    if arcsine(x) < 90:
+        return 90-arcsine(x)
+    return arcsine(x)-90
 
 def root(x: float) -> float:
     rand = 50 # A random starting point.
