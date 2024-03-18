@@ -59,10 +59,10 @@ def factorial(x: int) -> int:
         f_res *= x
     return f_res
 
-def toRadians(degrees):
+def toRadians(degrees: float) -> float:
     return degrees*PI/180
 
-def toDegrees(radians):
+def toDegrees(radians: float) -> float:
     return radians*(180/PI)
 
 if __name__ == "__main__":
