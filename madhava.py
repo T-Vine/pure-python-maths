@@ -19,8 +19,8 @@ def sine(theta: float) -> float:
 
 def cosine(theta: float) -> float:
     if theta < 90:
-        return sine(theta+toRadians(90)) # Graphs are the same but skewed.
-    return sine(theta-toRadians(90))
+        return sine(theta+to_radians(90)) # Graphs are the same but skewed.
+    return sine(theta-to_radians(90))
 
 def tangent(theta):
     return sine(theta)/cosine(theta)
@@ -59,15 +59,15 @@ def factorial(x: int) -> int:
         f_res *= x
     return f_res
 
-def toRadians(degrees: float) -> float:
+def to_radians(degrees: float) -> float:
     return degrees*PI/180
 
-def toDegrees(radians: float) -> float:
+def to_degrees(radians: float) -> float:
     return radians*(180/PI)
 
 if __name__ == "__main__":
     print(root(11301))
-    print(sine(toRadians(17))) # Accepts radians.
-    print(cosine(toRadians(0)))
-    print(tangent(toRadians(45)))
+    print(sine(to_radians(17))) # Accepts radians.
+    print(cosine(to_radians(0)))
+    print(tangent(to_radians(45)))
 
