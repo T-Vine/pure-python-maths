@@ -26,7 +26,7 @@ def tangent(theta: float) -> float:
     return sine(theta)/cosine(theta)
 
 def arcsine(x):
-    if not 0<abs(x)<1:
+    if abs(x) > 1:
         return None
     if x < 0:
         return arctan(x/math.sqrt(1-(x**2)))
