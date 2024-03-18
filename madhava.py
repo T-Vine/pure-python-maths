@@ -22,7 +22,7 @@ def cosine(theta: float) -> float:
         return sine(theta+to_radians(90)) # Graphs are the same but skewed.
     return sine(theta-to_radians(90))
 
-def tangent(theta):
+def tangent(theta: float) -> float:
     return sine(theta)/cosine(theta)
 
 def arcsine(x):
