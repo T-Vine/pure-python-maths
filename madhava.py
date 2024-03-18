@@ -32,9 +32,9 @@ def arcsine(x):
         return arctan(x/math.sqrt(1-(x**2)))
     return arctan(x/root(1-(x**2)))
 
-def arctan(x):
-    results = []
-    r = 0.0
+def arctan(x: float) -> int:
+    results: list[float] = []
+    r: float = 0.0
     if abs(x) > 1:
         return None
     for i in range(0,50):
