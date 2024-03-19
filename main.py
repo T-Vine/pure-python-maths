@@ -51,8 +51,8 @@ def arcsine(x: float) -> float:
     """
     if abs(x) > 1:
         return None
-    if 1-(x**2) == 0:
-        return to_radians(90)
+    elif x == 1:
+        return to_radians(90.0) #To be Patched.
     return arctan(x/root(1-(x**2)))
 
 def arctan(x: float) -> int:
@@ -81,8 +81,8 @@ def arccos(x: float) -> int:
     if abs(x) > 1:
         return None
     if arcsine(x) < 90:
-        return 90-arcsine(x)
-    return arcsine(x)-90
+        return to_radians(90)-arcsine(x)
+    return arcsine(x)-to_radians(90)
 
 def root(x: float) -> float:
     """Returns an approximated square root.
@@ -114,8 +114,6 @@ def to_degrees(radians: float) -> float:
     return radians*(180/PI)
 
 if __name__ == "__main__":
-    # Testing. To be moved to a proper file later.
-    print(sine(to_radians(30)))
     print(sine(to_radians(0)))
     print(sine(to_radians(90)))
 
@@ -128,6 +126,6 @@ if __name__ == "__main__":
     print(to_degrees(arcsine(0.5))) # 30
     print(to_degrees(arcsine(1))) # 90
     
-    #print(to_degrees(arccos(0.5))) # 60
-    #print(to_degrees(arccos(0))) # 90
+    print(to_degrees(arccos(0.5))) # 60
+    print(to_degrees(arccos(0))) # 90
     
